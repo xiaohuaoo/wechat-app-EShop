@@ -1,0 +1,56 @@
+<view><text class="name_left">收货人</text></view>
+<view class="name">
+  <view class="name_right">
+    <van-cell-group>
+      <van-field
+        value="{{ name }}"
+        required
+        clearable
+        label="姓名"
+        placeholder="请输入用户名"
+        bind:input="name"
+      />
+
+      <view class="name_right_bottom">
+      <view class="{{selectSex===selectSex_arr[0] ? 'selectSex' : '' }}" bindtap="man">先生</view>
+      <view class="{{selectSex===selectSex_arr[1] ? 'selectSex' : ''}}" bindtap="woman">女士</view>
+    </view>
+
+    </van-cell-group>
+  </view>
+</view>
+<view class="phone">
+    <van-cell-group>
+      <van-field
+        value="{{ phone }}"
+        required
+        clearable
+        label="手机号"
+        placeholder="请输入手机号"
+        bind:input="phone"
+      />
+    </van-cell-group>
+</view>
+<view class="address">
+  <van-cell-group>
+      <van-field
+        value="{{ address }}"
+        required
+        clearable
+        label="地址"
+        placeholder="小区/写字楼/楼号/单元/门牌号"
+        bind:input="address"
+      />
+    </van-cell-group>
+</view>
+<view class="address_leixing">
+  <text>地址类型</text>
+  <view class="address_leixing_right">
+    <view class="{{address_leixing == address_leixing_arr[0] ? 'select':''}}" data-name="家" bindtap="select">家</view>
+    <view class="{{address_leixing == address_leixing_arr[1] ? 'select':''}}" data-name="父母家" bindtap="select">父母家</view>
+    <view class="{{address_leixing == address_leixing_arr[2] ? 'select':''}}" data-name="朋友家" bindtap="select">朋友家</view>
+    <view class="{{address_leixing == address_leixing_arr[3] ? 'select':''}}" data-name="公司" bindtap="select">公司</view>
+    <view class="{{address_leixing == address_leixing_arr[4] ? 'select':''}}" data-name="学校" bindtap="select">学校</view>
+  </view>
+</view>
+<van-button class="saveButton" type="info" bind:click="baocun">保存收货地址</van-button>

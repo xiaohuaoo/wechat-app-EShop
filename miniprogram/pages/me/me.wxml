@@ -1,0 +1,78 @@
+<!--pages/me/me.wxml-->
+<view class="head">
+  <view class="user" wx:if="{{isMember===false}}">
+    <open-data type="userAvatarUrl" mode="aspectFit" class="img"></open-data>
+    <open-data type="userNickName" lang="zh_CN" class="name"></open-data>
+    <text class="userinfo-score" bindtap="score">积分：{{score}}</text>
+  </view>
+  <view class="userinfo" wx:else="{{isMember}}">
+    <open-data class="userinfo-avatar" type="userAvatarUrl"></open-data>
+    <view class="iser-info-box">
+      <open-data class="userinfo-nickname" type="userNickName"></open-data>
+      <text class="userinfo-score" bindtap="score">积分：{{score}}</text>
+    </view>
+    <!-- 广告 -->
+    <image bindtap="shareProditTap" src="../../icons/Profit.png" class="Profit"/>
+  </view>
+  <view class="classify">
+    <!-- <view class="body">
+      <image src="./img/img_1.png"></image>
+      <text>待支付</text>
+    </view> -->
+    <view class="body" bindtap="toOrder" data-name="待收货">
+      <image src="../../icons/待收货.png"></image>
+      <text>待收货</text>
+    </view>
+    <view class="body" bindtap="toOrder" data-name="已完成">
+      <image src="../../icons/订单已完成.png"></image>
+      <text>已完成</text>
+    </view>
+    <view class="body" bindtap="toOrder" data-name="全部订单">
+      <image src="../../icons/订单.png"></image>
+      <text>全部订单</text>
+    </view>
+  </view>
+</view>
+<!-- <view class="container">
+  <view class="text_left">
+    <text class="text_left_top">0</text>
+    <text class="text_left_bottom">优惠卷</text>
+  </view>
+  <view class="text_right">
+    <text class="text_left_top">0</text>
+    <text class="text_left_bottom">积分</text>
+  </view>
+</view> -->
+<!-- <image wx:if="{{isMember===false}}" src="../../images/成为会员banner.jpg"  mode="widthFix" class="poster" bindtap="goToMember"></image> -->
+<image src=""  mode="widthFix" class="poster" bindtap="goToMember"></image>
+<view class="menu">
+  <!-- <view class="menu_body">
+    <image src="./img/yaoqingyouli.png"></image>
+    <text>邀请有礼</text>
+  </view> -->
+  <view class="menu_body" bindtap="goToCollection">
+    <image src="../../icons/collection.png"></image>
+    <text>我的收藏</text>
+  </view>
+  <view class="menu_body" bindtap="goToPoints">
+    <image src="../../icons/商城2.png"></image>
+    <text>积分商城</text>
+  </view>
+  <view class="menu_body" bindtap="goToMember">
+    <image src="../../icons/会员.png"></image>
+    <text>会员</text>
+  </view>
+    <view wx:if="{{ isMember }}" class="menu_body" bindtap="admin">
+        <image src="../../icons/后台管理-后台管理.png"></image>
+        <text>后台管理</text>
+    </view>
+    <view wx:if="{{ isMember }}" class="menu_body"
+    bindtap="toDistribute">
+        <image src="../../icons/分销2.png"></image>
+        <text>分销中心</text>
+    </view>
+</view>
+<view class="Modal" wx:if="{{show}}">
+  <text>请输入密码</text>
+  <input type="text" bindinput="adminPwd" />
+</view>

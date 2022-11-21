@@ -1,0 +1,65 @@
+<!-- 商品图片 -->
+<image src="{{array.image}}" class="banner"></image>
+<view class="text">
+  <!-- 商品价格 -->
+  <text style="margin:10rpx 0 20rpx 0;font-weight:bold;color:#f00;font-size:40rpx">￥{{array.price}}</text>
+  <!-- 商品描述 -->
+  <!-- <text style="margin: 0 0 20rpx 0;font-size:32rpx;color:gray">{{array.detail}}</text> -->
+  <!-- 商品库存和销量 -->
+  <!-- <view class="text_bottom">
+    <text style="font-size:26rpx">库存:{{array.kucun}}</text>
+    <text style="margin-right:30rpx">销量:999</text>
+  </view> -->
+</view>
+
+<scroll-view scroll-y="true" style="height: 800rpx;" class="body">
+  <view class="body_top">
+    <view class="body_top_left" bindtap="select" data-id="left" style="font-weight:bold">
+      <text>评论区</text>
+      <view class="line" ></view>
+    </view>
+  </view>
+  <view class="body_middle">
+  <view class="img_text">
+    <image src="../../icons/comment.png"></image>
+    <text>共{{array.pinglun.length}}条评论</text>
+  </view>
+  <view class="pinglun_middle">
+    <view class="neirong" wx:for="{{array.pinglun}}" wx:key="index">
+      <image src="{{item.userImg}}"></image>
+      <view class="texts">
+        <view class="name_time">
+          <text style="color:orange;font-size:30rpx" >{{item.userName}}</text>
+          <text style="color:gray;font-size:25rpx;margin-left:10rpx">{{item.time}}</text>
+        </view>
+        <text class="neirong_value">{{item.neirong}}</text>      
+      </view>
+    </view>
+  </view>
+    <view class="pinglun_bottom">
+      <view class="img_text">
+        <image src="../../icons/write-comment.png"></image>
+        <text>发布评论</text>
+      </view>
+      <textarea bindinput="pinglun_value" value="{{pinglun_value}}">
+      </textarea>
+      <van-button class="pinglun_button"  color="#b2aef7" bindtap="getuserinfo">评论</van-button>
+    </view>
+    <button open-type="share" bindtap="onShareAppMessage">转发分享</button>  
+  </view>
+</scroll-view>
+
+<!-- <view class="bottom">
+  <view class="bottom_left" bindtap="shoucang">
+    <image src="{{shoucang[0]}}"></image>
+    <text>收藏</text>
+  </view>
+  <view class="bottom_right" bindtap="addToShopping">加入购物车</view>
+</view> -->
+
+<van-goods-action>
+  <van-goods-action-icon icon="goods-collect-o" text="收藏" bind:click="shoucang" />
+  <van-goods-action-icon icon="cart-o" text="购物车" info="5" />
+  <van-goods-action-button color="#be99ff" text="加入购物车" type="warning" bind:click="addToShopping" />
+  <van-goods-action-button color="#7232dd" text="立即购买" />
+</van-goods-action>

@@ -1,0 +1,66 @@
+<!--pages/searchResult/searchResult.wxml-->
+<!-- 自定义顶部导航 S -->
+<view class="navbar custom-class" style='height:{{navHeight}}px;'>
+  <view class="navbar-action-wrap navbar-action-group row item-center" style='top:{{navTop}}px;'>
+    <!-- <image style="width: 17.5px; height: 18px; padding-top: 3px;" src="{{leftIcon}}" catchtap="goBack"></image> -->
+  </view>
+  <view class='navbar-title' style='top:{{navTop}}px'>
+    <view class="search-input">
+      <span class="search-con">
+        <view class="center-30f2b4d">
+          <!-- 自定义区域 -->
+          <!-- <image class="icon" src="{{searchIcon}}" catchtap="searchbegin" data-postname="{{inputValue}}"></image> -->
+          <!-- <input class="search-size" confirm-type="search" value="{{inputValue}}" type="text" bindinput="getInputValue" placeholder="搜索品牌或商品" placeholder-class="phcolor" bindconfirm="searchbegin" data-postname="{{inputValue}}"></input> -->
+        </view>
+      </span>
+    </view>
+  </view>
+</view>
+<!-- 自定义顶部导航 E -->
+<view class="read-in" style="margin-top: {{navHeight}}px">
+  <!-- 最近搜索 S -->
+    <view class="headline" wx:if="{{historyStorage.length!=0}}" hidden="{{historyStorageShow?false:true}}">
+      <view class="head-headline justify">
+        <view class="headline-size">搜索历史</view>
+        <view class="icon-right size" bindtap="remove"><image src="https://ico.dongtiyan.com/tu-129.png"></image></view>
+      </view>
+      <!-- 最近搜索内容 S -->
+      <view class="lately-main">
+        <view class="chunk" wx:for="{{historyStorage}}" wx:key="index" bindtap='searchbegin' data-index='{{index}}' data-postname="{{item}}">
+          <text>{{item}}</text>
+        </view>
+      </view>
+      <!-- 最近搜索内容 E -->
+    </view>
+    <!-- 最近搜索 E -->
+    <!-- 热门搜索 S -->
+    <view class="headline">
+      <view class="head-headline">
+        <view class="headline-size">搜索发现</view> 
+      </view>
+      <!-- 热门推荐内容 S -->
+      <view class="lately-main">
+        <view class="chunk" wx:for="{{hotsearch1}}" wx:key="index" catchtap="goToClassify" bindtap="getInputValue" data-postname="{{item.title}}">
+          <text catchtap="goToClassify">{{item.title}}</text>
+        </view>
+      </view>
+      <!-- 热门推荐内容 E -->
+    </view>
+    <!-- 热门搜索 E -->
+</view>
+ 
+ 
+<!--搜索结果-->
+<view class="searchresult" wx:if="{{inputValue != ''}}" hidden="{{searchresult}}" >
+  <view class="result" wx:for="{{searchResult}}" catchtap="searchbegin" wx:key="index" bindtap="getInputValue" data-postname="{{item.result}}">
+    <view>{{item.result}}</view>
+    <image src="{{upperLeftArrow}}"></image>
+  </view>
+</view>
+ 
+<view class="searchresult" wx:if="{{inputValue != ''}}" hidden="{{searchresult?false:true}}" >
+  <view class="result" wx:for="{{searchResult}}" catchtap="searchbegin" wx:key="index" bindtap="getInputValue" data-postname="{{item.result}}">
+    <view>{{item.result}}</view>
+    <image src="{{upperLeftArrow}}"></image>
+  </view>
+</view>

@@ -1,0 +1,64 @@
+<!--pages/index/index.wxml-->
+<van-search
+  value="{{ value }}"
+  input-align="center"
+  placeholder="请输入搜索关键词"
+  bind:search="onSearch"
+  bind:cancel="onCancel"
+/>
+
+<view class="container">
+  <!-- 轮播图 -->
+  <swiper class="swiper-container" indicator-dots autoplay>
+      <swiper-item wx:for="{{swiperList}}" wx:key="index">
+        <navigator url="../classify/classify" open-type="navigate">
+        <image src="{{item}}"></image>
+      </navigator>
+      </swiper-item>
+  </swiper>
+
+  <!-- 广告滚动条 -->
+  <swiper class="scrollbar-container" vertical="true" autoplay="true" circular="true" interval="3000">
+    <block wx:for="{{msgList}}" wx:key="index">
+      <swiper-item>
+        <view class="scrollbar-item">{{item.title}}</view>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <!-- 分类入口 -->
+  <view class="linkTo-container">
+    <view class="linkTo-body" wx:for="{{array}}" wx:key="index" data-name="{{item.name}}" bindtap="selectName">
+      <navigator url="{{item.url}}">
+        <image src="{{item.img}}"></image>
+        <text>{{item.name}}</text>
+      </navigator>
+    </view>
+  </view>
+
+  <!-- 商品推荐 -->
+  <view class="sort">
+    <van-dropdown-menu>
+      <van-dropdown-item 
+      value="{{ value1 }}" 
+      options="{{ option1 }}" 
+      bind:change="onSwitch1Change"/>
+      <van-dropdown-item 
+        value="{{ value2 }}"
+        options="{{ option2 }}"
+       bind:change="onSwitch2Change" />
+    </van-dropdown-menu>
+  </view>
+
+  <scroll-view scroll-y="true" style="height: 500px">
+    <view class="productItem-container">
+      <view class="productItem-item" wx:for="{{productList}}" wx:key="_id" data-id="{{item._id}}" bindtap="GoToProduct">
+        <image src="{{item.image}}"></image>
+        <text>{{item.name}}</text>
+        <text class="priceNumber">{{item.price}}</text>
+      </view>
+    </view>
+    <view class="loading" hidden="{{!loadMore}}">正在载入更多...</view>
+    <view class="loading" hidden="{{!loadAll}}">已加载全部</view>
+  </scroll-view>
+</view>

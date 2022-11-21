@@ -1,0 +1,63 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/classify/classify",
+    "pages/cart/cart",
+    "pages/me/me",
+    "pages/searchResult/searchResult",
+    "pages/product/product",
+    "pages/myOrder/myOrder",
+    "pages/admin/admin",
+    "pages/myCollection/myCollection",
+    "pages/points/points",
+    "pages/member/member",
+    "pages/manageProduct/manageProduct",
+    "pages/addProduct/addProduct",
+    "pages/distribute/distribute",
+    "pages/address/address",
+    "pages/address_detail/address_detail",
+    "pages/shop_order/shop_order",
+    "pages/me/share/share"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "小程序商城平台",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "icons/home.png",
+      "selectedIconPath": "icons/home.png"
+    },
+    {
+      "pagePath": "pages/classify/classify",
+      "text": "商品",
+      "iconPath": "icons/product.png",
+      "selectedIconPath": "icons/product.png"
+    },
+    {
+      "pagePath": "pages/cart/cart",
+      "text": "购物车",
+      "iconPath": "icons/cart.png",
+      "selectedIconPath": "icons/cart.png"
+    },
+    {
+      "pagePath": "pages/me/me",
+      "text": "我的",
+      "iconPath": "icons/me.png",
+      "selectedIconPath": "icons/me.png"
+    }]
+  },
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index",
+    "van-search": "@vant/weapp/search/index",
+    "van-dropdown-menu": "@vant/weapp/dropdown-menu/index",
+    "van-dropdown-item": "@vant/weapp/dropdown-item/index",
+    "van-card": "@vant/weapp/card/index"
+  },
+  "sitemapLocation": "sitemap.json"
+}

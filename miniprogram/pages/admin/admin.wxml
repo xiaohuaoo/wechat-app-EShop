@@ -1,0 +1,6 @@
+<view class="content">
+  <view class="body" bindtap="manageProduct">
+    <image src="../../icons/管理商品.png"></image>
+    <text>管理商品</text>
+  </view>
+</view>

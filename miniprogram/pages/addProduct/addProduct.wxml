@@ -1,0 +1,53 @@
+<view class="content">
+  <van-cell-group>
+    <van-field
+      value="{{ productName }}"
+      required
+      clearable
+      label="商品名称"
+      icon="question-o"
+      placeholder="请输入商品名称"
+      bind:input="getProductName"
+    />
+
+    <van-field
+      value="{{ productDesc }}"
+      label="描述"
+      placeholder="请输入商品的描述信息"
+      required
+      border="{{ false }}"
+      bind:input="getProductDesc"
+    />
+
+    <!-- <picker bindchange="bindPickerChange" value="{{index}}" range="{{productFenlei}}" data-value="{{productFenlei[index]}}">
+      <view class="picker">
+        当前选择：{{productFenlei[index]}}
+      </view>
+    </picker> -->
+
+    <van-field
+      value="{{ productFenlei }}"
+      label="分类"
+      placeholder="请输入商品所属类别"
+      required
+      border="{{ false }}"
+      bind:input="getProductFenlei"
+    />
+
+    <van-field
+      value="{{ productPrice }}"
+      label="单价"
+      placeholder="请输入商品单价"
+      required
+      border="{{ false }}"
+      bind:input="getProductPrice"
+    />
+</van-cell-group>
+
+<view class="image">
+  <text>商品图片:</text>
+  <button type="primary" style="width:50%" bindtap="getPicture">添加图片</button>
+  <image src="{{fileID}}" wx:if="{{fileID !== ''}}" mode="widthFix" style="width:200rpx;height:200rpx;margin:0 auto"></image>
+</view>
+<button style="margin-top:30rpx;background-color:#00f;color:#fff;width:70%;margin-bottom:30rpx" bindtap="submit">提交</button>
+</view>

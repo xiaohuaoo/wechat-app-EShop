@@ -1,0 +1,17 @@
+<view class="body">
+  <scroll-view scroll-y="true" wx:for="{{array}}" wx:key="index" bindtap="goToProduct" data-id="{{item.id}}">
+    <van-card
+      num="2"
+      tag="标签"
+      price="{{ item.price }}"
+      desc="描述信息"
+      title="{{ item.name }}"
+      thumb="{{ item.image }}"
+    >
+      <!-- <view slot="footer">
+        <van-button size="mini">按钮</van-button>
+        <van-button size="mini">按钮</van-button>
+      </view> -->
+    </van-card>
+  </scroll-view>
+</view>

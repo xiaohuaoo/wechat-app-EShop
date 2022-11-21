@@ -1,0 +1,26 @@
+<!--pages/points/points.wxml-->
+<view class="body">
+  <van-sticky>
+  总积分：{{score}}
+  </van-sticky>
+
+  <van-notify id="van-notify" />
+
+  <!-- 商品列表 -->
+  <scroll-view 
+    scroll-y="true" 
+    style="height: 300rpx;"
+    wx:for="{{pointsList}}" 
+    wx:key="index" 
+    data-id="{{item._id}}">
+    <van-card
+      price="{{item.price}}"
+      title="{{item.name}}"
+      thumb="{{ item.image }}"
+    >
+      <view slot="footer">
+        <van-button size="mini" data-id="{{item._id}}" bind:click="toExchange">兑换</van-button>
+      </view>
+    </van-card>
+  </scroll-view>
+</view>

@@ -1,0 +1,12 @@
+<view class="product" wx:for="{{product}}" wx:key="index">
+  <van-card
+    price="{{ item.price }}"
+    title="{{ item.name }}"
+    thumb="{{ item.image }}"
+  >
+    <view slot="footer">
+      <van-button data-id="{{item._id}}" data-fileID="{{item.image}}" bindtap="delete" bind:click="delete" size="mini">删除</van-button>
+      <van-button data-id="{{item._id}}" data-fileID="{{item.image}}" bind:click="update" size="mini">修改</van-button>
+    </view>
+  </van-card>
+</view>

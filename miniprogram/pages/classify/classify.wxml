@@ -1,0 +1,22 @@
+<!--pages/classify/classify.wxml-->
+<view class="body">
+  <view class="left">
+    <!-- 左侧导航栏 -->
+    <view wx:for="{{left_name}}" wx:key="index" bindtap="selectId" data-name="{{item.name}}"
+     class="{{name == item.name ? 'left_name_hover' : ''}}">
+      <view class="name">{{item.name}}</view>
+    </view>
+  </view>
+  <!-- 右侧展示商品栏 -->
+  <view class="right" scroll-y>
+    <view class="product" wx:for="{{product}}" wx:key="index" bindtap="GoToProduct" data-id="{{item._id}}">
+      <image src="{{item.image}}"></image>
+      <view class="text">
+        <text>{{item.name}}</text>
+        <text>{{item.detail}}</text>
+      </view>
+      <text>￥{{item.price}}</text>
+      <!-- <text>销量：999</text> -->
+    </view>
+  </view>
+</view>

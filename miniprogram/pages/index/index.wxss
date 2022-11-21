@@ -1,0 +1,89 @@
+.swiper-container image {
+  width: 100%;
+  height: calc(100vw*9/16);
+}
+
+.scrollbar-container {
+  height: 60rpx;
+  width: 100%;
+  background-color: #ecf9ff;
+  margin-top: 20rpx;
+}
+
+.scrollbar-item {
+  color: rgb(107, 107, 107);
+  font-size: 30rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.linkTo-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: white;
+  margin-top: 20rpx;
+  padding-bottom: 20rpx;
+}
+.linkTo-body {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 25%;
+}
+.linkTo-body text {
+  text-align: center;
+  font-size: 28rpx;
+  margin-top: 10rpx;
+  display: flex;
+  flex-direction: column;
+}
+.linkTo-body image { 
+  width: 75rpx;
+  height: 75rpx;
+  margin: 0 auto;
+}
+
+.productItem-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.productItem-item {
+  width: 350rpx;
+  height: auto;
+  /* border: 1px solid #ccc; */
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 10rpx;
+}
+
+.productItem-item image {
+  width: 300rpx;
+  height: 400rpx;
+  margin: 20rpx;
+}
+
+.productItem-item text {
+  font-size: 26rpx;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.priceNumber {
+  font-size: 48px;
+  font-weight: bold;
+  margin-top: 10rpx;
+}
+
+.loading {
+  position: relative;
+  bottom: 5rpx;
+  padding: 10rpx;
+  text-align: center;
+}
