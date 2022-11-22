@@ -1,11 +1,6 @@
 <!--pages/index/index.wxml-->
-<van-search
-  value="{{ value }}"
-  input-align="center"
-  placeholder="请输入搜索关键词"
-  bind:search="onSearch"
-  bind:cancel="onCancel"
-/>
+<!-- 搜索框 -->
+<search></search>
 
 <view class="container">
   <!-- 轮播图 -->

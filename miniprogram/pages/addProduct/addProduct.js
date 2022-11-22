@@ -1,4 +1,3 @@
-const util = require('../util.js');
 const db = wx.cloud.database();
 Page({
   /**

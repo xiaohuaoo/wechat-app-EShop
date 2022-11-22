@@ -13,7 +13,6 @@ Page({
    * 页面的初始数据
    */
   data: {
-    value: '',
     swiperList: [
       'https://636c-cloud1-6g0yx3hi0dd04e91-1314458791.tcb.qcloud.la/swiper-pic1.jpg?sign=ebdec4ced599732336528eac2b704201&t=1666767642',
       'https://636c-cloud1-6g0yx3hi0dd04e91-1314458791.tcb.qcloud.la/swiper-pic2.jpg?sign=2c9fbf816f42bdabea24d0b7423dd05d&t=1666767792',
@@ -48,13 +47,6 @@ Page({
     orderList: [], // 商品排序后的结果
     loadMore: false, //"上拉加载"的变量，默认false，隐藏  
     loadAll: false //“没有数据”的变量，默认false，隐藏
-  },
-
-  onSearch (e) {
-    const searchValue = e.detail
-    wx.navigateTo({
-      url: '../searchResult/searchResult?name='+searchValue,
-    })
   },
 
   // 商品过滤排序：全部商品列
@@ -113,12 +105,6 @@ Page({
         }
       })
     }
-  },
-
-  onCancel () {
-    this.setData({
-      value: ''
-    })
   },
 
   // 跳转商品详情页

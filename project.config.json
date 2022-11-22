@@ -37,7 +37,8 @@
     "useStaticServer": true,
     "packNpmManually": false,
     "packNpmRelationList": [],
-    "ignoreUploadUnusedFiles": true
+    "ignoreUploadUnusedFiles": true,
+    "ignoreDevUnusedFiles": false
   },
   "cloudfunctionTemplateRoot": "cloudfunctionTemplate/",
   "condition": {

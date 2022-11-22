@@ -19,12 +19,6 @@
       bind:input="getProductDesc"
     />
 
-    <!-- <picker bindchange="bindPickerChange" value="{{index}}" range="{{productFenlei}}" data-value="{{productFenlei[index]}}">
-      <view class="picker">
-        当前选择：{{productFenlei[index]}}
-      </view>
-    </picker> -->
-
     <van-field
       value="{{ productFenlei }}"
       label="分类"

@@ -1,6 +1,5 @@
 {
   "usingComponents": {
-    "van-field": "@vant/weapp/field/index",
-    "van-tree-select": "@vant/weapp/tree-select/index"
+    "van-field": "@vant/weapp/field/index"
   }
 }

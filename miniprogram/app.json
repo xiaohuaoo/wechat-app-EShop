@@ -59,5 +59,6 @@
     "van-dropdown-item": "@vant/weapp/dropdown-item/index",
     "van-card": "@vant/weapp/card/index"
   },
+  "lazyCodeLoading": "requiredComponents",
   "sitemapLocation": "sitemap.json"
 }
