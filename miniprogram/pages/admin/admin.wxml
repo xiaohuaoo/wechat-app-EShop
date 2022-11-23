@@ -1,6 +1,6 @@
 <view class="content">
   <view class="body" bindtap="manageProduct">
-    <image src="../../icons/管理商品.png"></image>
+    <image src="https://636c-cloud1-6g0yx3hi0dd04e91-1314458791.tcb.qcloud.la/%E7%AE%A1%E7%90%86%E5%95%86%E5%93%81.png?sign=1a568df730a86741775fc8368ab85231&t=1669202944"></image>
     <text>管理商品</text>
   </view>
 </view>

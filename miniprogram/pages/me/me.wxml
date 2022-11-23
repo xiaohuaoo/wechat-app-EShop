@@ -12,7 +12,7 @@
       <text class="userinfo-score" bindtap="score">积分：{{score}}</text>
     </view>
     <!-- 广告 -->
-    <image bindtap="shareProditTap" src="../../icons/Profit.png" class="Profit"/>
+    <image bindtap="shareProditTap" src="https://636c-cloud1-6g0yx3hi0dd04e91-1314458791.tcb.qcloud.la/Profit.png?sign=c5fde5e79cdee5ea9b39eb36eec08007&t=1669202649" class="Profit"/>
   </view>
   <view class="classify">
     <!-- <view class="body">
@@ -20,15 +20,15 @@
       <text>待支付</text>
     </view> -->
     <view class="body" bindtap="toOrder" data-name="待收货">
-      <image src="../../icons/待收货.png"></image>
+      <image src="https://636c-cloud1-6g0yx3hi0dd04e91-1314458791.tcb.qcloud.la/%E5%BE%85%E6%94%B6%E8%B4%A7.png?sign=63ded5f440cd3910f783997e8195f5da&t=1669202671"></image>
       <text>待收货</text>
     </view>
     <view class="body" bindtap="toOrder" data-name="已完成">
-      <image src="../../icons/订单已完成.png"></image>
+      <image src="https://636c-cloud1-6g0yx3hi0dd04e91-1314458791.tcb.qcloud.la/%E8%AE%A2%E5%8D%95%E5%B7%B2%E5%AE%8C%E6%88%90.png?sign=43580f3ced1b865793dddb71a3b86163&t=1669202693"></image>
       <text>已完成</text>
     </view>
     <view class="body" bindtap="toOrder" data-name="全部订单">
-      <image src="../../icons/订单.png"></image>
+      <image src="https://636c-cloud1-6g0yx3hi0dd04e91-1314458791.tcb.qcloud.la/%E8%AE%A2%E5%8D%95.png?sign=439e9e8f11869bc7227a3102f74ff60d&t=1669202740"></image>
       <text>全部订单</text>
     </view>
   </view>
@@ -55,20 +55,20 @@
     <text>我的收藏</text>
   </view>
   <view class="menu_body" bindtap="goToPoints">
-    <image src="../../icons/商城2.png"></image>
+    <image src="https://636c-cloud1-6g0yx3hi0dd04e91-1314458791.tcb.qcloud.la/%E5%95%86%E5%9F%8E2.png?sign=6d7aea1acb0b75ef64a44f1861f04e81&t=1669202766"></image>
     <text>积分商城</text>
   </view>
   <view class="menu_body" bindtap="goToMember">
-    <image src="../../icons/会员.png"></image>
+    <image src="https://636c-cloud1-6g0yx3hi0dd04e91-1314458791.tcb.qcloud.la/%E4%BC%9A%E5%91%98.png?sign=75d1a76d454b23cd7868c4a6ca4ec894&t=1669202779"></image>
     <text>会员</text>
   </view>
     <view wx:if="{{ isMember }}" class="menu_body" bindtap="admin">
-        <image src="../../icons/后台管理-后台管理.png"></image>
+        <image src="https://636c-cloud1-6g0yx3hi0dd04e91-1314458791.tcb.qcloud.la/%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86-%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86.png?sign=ae26f2a56b82c9cc2902e1e8205fcd51&t=1669202790"></image>
         <text>后台管理</text>
     </view>
     <view wx:if="{{ isMember }}" class="menu_body"
     bindtap="toDistribute">
-        <image src="../../icons/分销2.png"></image>
+        <image src="https://636c-cloud1-6g0yx3hi0dd04e91-1314458791.tcb.qcloud.la/%E5%88%86%E9%94%802.png?sign=9df21c6f893f114492c0d721e446d6df&t=1669202801"></image>
         <text>分销中心</text>
     </view>
 </view>
