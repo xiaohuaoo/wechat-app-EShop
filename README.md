@@ -79,6 +79,30 @@
 
 
 
+## 云数据库、云存储、云函数内数据展示
+
+![iU4Sp.jpeg](https://i.328888.xyz/img/2022/11/30/iU4Sp.jpeg)
+
+![iUy3L.jpeg](https://i.328888.xyz/img/2022/11/30/iUy3L.jpeg)
+
+![iUDVU.jpeg](https://i.328888.xyz/img/2022/11/30/iUDVU.jpeg)
+
+![iUUbv.jpeg](https://i.328888.xyz/img/2022/11/30/iUUbv.jpeg)
+
+![iUn63.jpeg](https://i.328888.xyz/img/2022/11/30/iUn63.jpeg)
+
+![iUtQy.jpeg](https://i.328888.xyz/img/2022/11/30/iUtQy.jpeg)
+
+![iUkC5.jpeg](https://i.328888.xyz/img/2022/11/30/iUkC5.jpeg)
+
+![iU0g8.jpeg](https://i.328888.xyz/img/2022/11/30/iU0g8.jpeg)
+
+![iUCLZ.jpeg](https://i.328888.xyz/img/2022/11/30/iUCLZ.jpeg)
+
+![iUwUF.jpeg](https://i.328888.xyz/img/2022/11/30/iUwUF.jpeg)
+
+
+
 ## 其它
 
 * 因微信支付功能要基于企业或团队，本人是个人开发者，所以项目中的支付功能只是模拟，没有实际功能；
